@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Novel - Login</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="static/register/css/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="static/register/css/style.css"/>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url('images/form-v9.jpg')">
+			<form class="form-detail" action="#" method="post">
+				<{% block title %}Login{% endblock %}
+  <!-- Main Content -->
+  {% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="container">
+            <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+                <button style="background-color:#6202e5; color:white" class="btn btn-outline-info" type="submit">Sign in</button>
+            You already have a Novel account. ? <a href="/Register" target="blank">Register here!</strong></a>!
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
